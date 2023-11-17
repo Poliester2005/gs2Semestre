@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Inter);
 
 $azul: #2b4c7e;
+$branco: #e4e3d3;
 
 * {
     font-family: 'Inter';
@@ -19,7 +20,7 @@ $azul: #2b4c7e;
     justify-content: space-evenly;
 
     .containerLogo {
-        color: white;
+        color: $branco;
         background-color: $azul;
         display: flex;
         flex-direction: column;
@@ -34,7 +35,7 @@ $azul: #2b4c7e;
 
     .containerLink {
         div {
-            color: white;
+            color: $branco;
             background-color: $azul;
             display: flex;
             flex-direction: column;
@@ -56,7 +57,7 @@ $azul: #2b4c7e;
             }
 
             &:has(>.active) {
-                background-color: whitesmoke;
+                background-color: $branco;
                 color: black;
                 text-decoration: none;
                 color: inherit;
@@ -67,16 +68,16 @@ $azul: #2b4c7e;
     }
 
     .containerConfig {
-        color: white;
+        color: $branco;
         background-color: $azul;
 
         &:hover {
-            background-color: azure;
+            background-color: $branco;
             color: black;
         }
 
         &:has(>.active) {
-            background-color: whitesmoke;
+            background-color: $branco;
             color: black;
             text-decoration: none;
             color: inherit;
