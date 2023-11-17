@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Inter);
+
+$azul: #2b4c7e;
+
+* {
+    font-family: 'Inter';
+}
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    background: $azul;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .containerLogo {
+        color: white;
+        background-color: $azul;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .containerLink {
+        div {
+            color: white;
+            background-color: $azul;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 9vh;
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .NavLink {
+                text-decoration: none;
+                color: inherit;
+                width: 100%;
+                text-align: center;
+
+            }
+
+            &:has(>.active) {
+                background-color: whitesmoke;
+                color: black;
+                text-decoration: none;
+                color: inherit;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .containerConfig {
+        color: white;
+        background-color: $azul;
+
+        &:hover {
+            background-color: azure;
+            color: black;
+        }
+
+        &:has(>.active) {
+            background-color: whitesmoke;
+            color: black;
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+            text-align: center;
+        }
+
+        .NavLink {
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+            text-align: center;
+
+        }
+    }
+}
