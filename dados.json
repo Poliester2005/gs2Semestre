@@ -1,0 +1,21 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Eduardo",
+      "email": "eduardopsancehz2005@gmail.com",
+      "img": "https://media.discordapp.net/attachments/962517269617991680/1175265240653508678/Us.jpg?ex=656a9a0c&is=6558250c&hm=85b77c65033733843aa5ac3f5c74495f01fd9926795df4667dc2e6e3069b8759&=&width=884&height=497",
+      "senha": "teste",
+      "nivel": 0,
+      "xp": 0
+    },
+    {
+      "id": 2,
+      "nome": "Renato",
+      "email": "Todays article will demonstrate how to develop a login form in react js using formik.",
+      "senha": "teste",
+      "nivel": 0,
+      "xp": 0
+    }
+  ]
+}

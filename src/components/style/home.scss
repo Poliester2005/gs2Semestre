@@ -1,16 +1,64 @@
-*{
+$azul: #2384c8;
+$azul2: #5be0e6;
+$gradiente: linear-gradient($azul, $azul2);
+$branco: #fff;
+* {
     margin: 0;
     padding: 0;
 }
-.containerHome{
+.containerHome {
     margin-top: 1%;
     margin-left: 12%;
     width: 86vw;
     height: 95vh;
-    background-color: #e4e3d3;
+    background-color: $branco;
     border-radius: 20px;
-
-    .containerLogo{
-        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .containerLogo {
+        width: 50vw;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .containerRanking {
+        margin: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 25vh;
+        .containerPodium {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25vh;
+            overflow-y: hidden;
+            .podium {
+                width: 5vw;
+                height: 15vh;
+                border: solid black 2px;
+                border-bottom: none;
+                display: flex;
+                justify-content: center;
+            }
+            .primeiro {
+                margin-top: 0;
+            }
+            .segundo {
+                margin-top: 40%;
+            }
+            .terceiro {
+                margin-top: 80%;
+            }
+        }
+        .containerRankingPessoal {
+            padding: 5px;
+            padding-left: 100px;
+            padding-right: 100px;
+            border: solid black 1px;
+        }
     }
 }

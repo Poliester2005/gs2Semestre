@@ -1,10 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Inter);
 
-$azul: #2b4c7e;
-$branco: #e4e3d3;
+$azul: #2384c8;
+$azul2: #5be0e6;
+$gradiente: linear-gradient($azul, $azul2);
+$branco: #fff;
 
 * {
-    font-family: 'Inter';
+    font-family: "Inter";
 }
 
 .navBar {
@@ -14,19 +16,19 @@ $branco: #e4e3d3;
     width: 10%;
     height: 100%;
     border-radius: 0 10px 10px 0;
-    background: $azul;
+    background: $gradiente;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     .containerLogo {
         color: $branco;
-        background-color: $azul;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: fit-content;
+        margin-top: 50px;
 
         img {
             width: 100px;
@@ -36,7 +38,6 @@ $branco: #e4e3d3;
     .containerLink {
         div {
             color: $branco;
-            background-color: $azul;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -53,10 +54,9 @@ $branco: #e4e3d3;
                 color: inherit;
                 width: 100%;
                 text-align: center;
-
             }
 
-            &:has(>.active) {
+            &:has(> .active) {
                 background-color: $branco;
                 color: black;
                 text-decoration: none;
@@ -69,14 +69,26 @@ $branco: #e4e3d3;
 
     .containerConfig {
         color: $branco;
-        background-color: $azul;
+
+        .config {
+            height: 9vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
 
         &:hover {
             background-color: $branco;
             color: black;
         }
 
-        &:has(>.active) {
+        &:has(> .active) {
             background-color: $branco;
             color: black;
             text-decoration: none;
@@ -90,7 +102,6 @@ $branco: #e4e3d3;
             color: inherit;
             width: 100%;
             text-align: center;
-
         }
     }
 }
