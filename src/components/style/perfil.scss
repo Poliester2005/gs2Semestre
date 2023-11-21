@@ -4,60 +4,82 @@ $gradiente: linear-gradient($azul, $azul2);
 $branco: #fff;
 
 .containerPerfil {
-    margin-top: 1%;
-    margin-left: 12%;
-    width: 86vw;
-    height: 95vh;
-    background-color: $branco;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    .containerDados {
+	margin-top: 1%;
+	margin-left: 12%;
+	width: 86vw;
+	height: 95vh;
+	background-color: lightgray;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.containerDados {
+		display: flex;
+		flex-direction: column;
+		.containerImg {
+			display: flex;
+			align-items: center;
+			.details {
+				margin-left: 25px;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+			}
+			.imageResizer {
+				width: 100px;
+				height: 100px;
+				position: relative;
+				overflow: hidden;
+				border-radius: 50%;
+				img {
+					display: inline;
+					margin: 0 auto;
+					margin-left: -25%; //centers the image
+					height: 100%;
+					width: auto;
+				}
+			}
+		}
+		.perfilNivel {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			.progressBar {
+				border-radius: 7px;
+				height: 11px;
+				margin-left: -11.5%;
+				box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+			}
+			.progressBar::-webkit-progress-bar {
+				background-color: $branco;
+			}
+			.progressBar::-webkit-progress-value {
+				background-color: $azul;
+			}
+		}
+	}
+    .Linha{
+        margin: 5px;
+        width: 90%;
+        height: 1%;
+        border-radius: 5px;
+        background: #000;
+    }
+    .containerAtividades{
         display: flex;
-        align-items: center;
         flex-direction: column;
-        .containerImg {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80%;
+        .cardTarefa{
             display: flex;
-            align-items: center;
-            .details {
-                margin-left: 25px;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-            }
-            .imageResizer {
-                width: 100px;
-                height: 100px;
-                position: relative;
-                overflow: hidden;
-                border-radius: 50%;
-                img {
-                    display: inline;
-                    margin: 0 auto;
-                    margin-left: -25%; //centers the image
-                    height: 100%;
-                    width: auto;
-                }
-            }
-        }
-        .perfilNivel {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            .progressBar {
-                border-radius: 7px;
-                height: 11px;
-                margin-left: -11.5%;
-                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-            }
-            .progressBar::-webkit-progress-bar {
-                background-color: $branco;
-            }
-            .progressBar::-webkit-progress-value {
-                background-color: $azul;
-            }
+            justify-content: center;
+            text-align: center;
+            width: 30%;
+            height: 30%;
+            background-color: white;
         }
     }
 }

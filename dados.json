@@ -8,19 +8,39 @@
       "senha": "teste",
       "nivel": 0,
       "xp": 0,
-      "tarefasDiaria1": 0,
-      "tarefasDiaria2": 0,
+      "tarefasDiaria1": 1,
+      "tarefasDiaria2": 1,
       "tarefasDiaria3": 0,
       "tarefasMensal1": 0,
-      "tarefasMensal2": 0
+      "tarefasMensal2": 1
     },
     {
       "id": 2,
-      "nome": "Renato",
-      "email": "Todays article will demonstrate how to develop a login form in react js using formik.",
-      "senha": "teste",
-      "nivel": 0,
-      "xp": 0
+      "nome": "Maria",
+      "email": "maria@gmail.com",
+      "img": "https://example.com/maria.jpg",
+      "senha": "senha123",
+      "nivel": 1,
+      "xp": 50,
+      "tarefasDiaria1": 1,
+      "tarefasDiaria2": 0,
+      "tarefasDiaria3": 1,
+      "tarefasMensal1": 0,
+      "tarefasMensal2": 1
+    },
+    {
+      "id": 3,
+      "nome": "João",
+      "email": "joao@gmail.com",
+      "img": "https://example.com/joao.jpg",
+      "senha": "joao456",
+      "nivel": 2,
+      "xp": 100,
+      "tarefasDiaria1": 1,
+      "tarefasDiaria2": 1,
+      "tarefasDiaria3": 1,
+      "tarefasMensal1": 1,
+      "tarefasMensal2": 0
     }
   ]
 }
