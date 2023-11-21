@@ -21,9 +21,22 @@ export default function Perfil() {
         getData();
     }, [idUsuario]);
     return <>
-        <div className='containerPerfil'>
-            <img src={usuario.img} alt="" />
-            <h3>{usuario.nome}</h3>
-        </div>
+        <main className='containerPerfil'>
+            <div className="containerDados">
+                <div className="containerImg">
+                    <figure className="imageResizer">
+                        <img src={usuario.img} alt="" className="perfilImg" />
+                    </figure>
+                    <div className="details">
+                        <h2>{usuario.nome}</h2>
+                        <p>Nível: {usuario.nivel}</p>
+                        <div className="perfilNivel">
+                            <label htmlFor='xp'>XP</label>
+                            <progress id='xp' value='25' max='50' className="progressBar"></progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main >
     </>
 }

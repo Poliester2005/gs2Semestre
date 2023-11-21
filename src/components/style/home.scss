@@ -17,6 +17,7 @@ $branco: #fff;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: lightgrey;
     .containerLogo {
         width: 50vw;
         img {
@@ -25,7 +26,6 @@ $branco: #fff;
         }
     }
     .containerRanking {
-        margin: 30px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -34,24 +34,27 @@ $branco: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 25vh;
             overflow-y: hidden;
             .podium {
                 width: 5vw;
-                height: 15vh;
+                height: 12vh;
                 border: solid black 2px;
+                border-radius: 5px;
                 border-bottom: none;
                 display: flex;
                 justify-content: center;
+                background-color: $azul;
+                color: $branco;
             }
             .primeiro {
                 margin-top: 0;
+                height: 16.5vh;
             }
             .segundo {
-                margin-top: 40%;
+                margin-top: 20%;
             }
             .terceiro {
-                margin-top: 80%;
+                margin-top: 40%;
             }
         }
         .containerRankingPessoal {

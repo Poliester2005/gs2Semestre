@@ -23,11 +23,11 @@ export default function Home() {
         getData();
     }, []);
     return <>
-        <div className='containerHome'>
-            <div className='containerLogo'>
+        <main className='containerHome'>
+            <header className='containerLogo'>
                 <img src={logo} alt="" />
-            </div>
-            <div className='containerRanking'>
+            </header>
+            <article className='containerRanking'>
                 <h1>Top 3 pessoas com maior nivel</h1>
                 <div className='containerPodium'>
                     <div className='podium segundo'>2° Lugar</div>
@@ -38,7 +38,7 @@ export default function Home() {
                     <p>Sua posição é: 5°</p>
                     <p>Seu nome é: {usuario.nome}</p>
                 </div>
-            </div>
-        </div>
+            </article>
+        </main>
     </>
 }

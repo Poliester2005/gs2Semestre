@@ -11,7 +11,7 @@ import logo from '../assets/logo.png'
 export default function Nav() {
 
     return <>
-        <div className='navBar'>
+        <nav className='navBar'>
             <div className='containerLogo'>
                 <img src={logo} alt="" />
                 <h4>Doce</h4>
@@ -39,7 +39,7 @@ export default function Nav() {
                     <NavLink activeClassName="active" className="NavLink" to="/config">Configurações</NavLink>
                 </div>
             </div>
-        </div>
+        </nav>
 
     </>
 }

@@ -7,7 +7,12 @@
       "img": "https://media.discordapp.net/attachments/962517269617991680/1175265240653508678/Us.jpg?ex=656a9a0c&is=6558250c&hm=85b77c65033733843aa5ac3f5c74495f01fd9926795df4667dc2e6e3069b8759&=&width=884&height=497",
       "senha": "teste",
       "nivel": 0,
-      "xp": 0
+      "xp": 0,
+      "tarefasDiaria1": 0,
+      "tarefasDiaria2": 0,
+      "tarefasDiaria3": 0,
+      "tarefasMensal1": 0,
+      "tarefasMensal2": 0
     },
     {
       "id": 2,
