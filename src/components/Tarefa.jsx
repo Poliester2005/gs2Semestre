@@ -28,40 +28,40 @@ export default function Tarefa() {
 
       switch (indice) {
         case 0:
-            if(usuarioAtualizado.tarefasDiaria1 == 1){
-                usuarioAtualizado.tarefasDiaria1 = 0;
-            } else{
-                usuarioAtualizado.tarefasDiaria1 = 1;
-            }
+          if (usuarioAtualizado.tarefasDiaria1 == 1) {
+            usuarioAtualizado.tarefasDiaria1 = 0;
+          } else {
+            usuarioAtualizado.tarefasDiaria1 = 1;
+          }
           break;
         case 1:
-          if(usuarioAtualizado.tarefasDiaria2 == 1){
-              usuarioAtualizado.tarefasDiaria2 = 0;
-          } else{
-              usuarioAtualizado.tarefasDiaria2 = 1;
+          if (usuarioAtualizado.tarefasDiaria2 == 1) {
+            usuarioAtualizado.tarefasDiaria2 = 0;
+          } else {
+            usuarioAtualizado.tarefasDiaria2 = 1;
           }
           break;
         case 2:
-            if(usuarioAtualizado.tarefasDiaria3 == 1){
-                usuarioAtualizado.tarefasDiaria3 = 0;
-            } else{
-                usuarioAtualizado.tarefasDiaria3 = 1;
-            }
+          if (usuarioAtualizado.tarefasDiaria3 == 1) {
+            usuarioAtualizado.tarefasDiaria3 = 0;
+          } else {
+            usuarioAtualizado.tarefasDiaria3 = 1;
+          }
           break;
         case 3:
-          if(usuarioAtualizado.tarefasMensal1 == 1){
-              usuarioAtualizado.tarefasMensal1 = 0;
-          } else{
-              usuarioAtualizado.tarefasMensal1 = 1;
+          if (usuarioAtualizado.tarefasMensal1 == 1) {
+            usuarioAtualizado.tarefasMensal1 = 0;
+          } else {
+            usuarioAtualizado.tarefasMensal1 = 1;
           }
           break;
         case 4:
-            if(usuarioAtualizado.tarefasMensal2 == 1){
-                usuarioAtualizado.tarefasMensal2 = 0;
-            } else{
-                usuarioAtualizado.tarefasMensal2 = 1;
-            }
-            break;
+          if (usuarioAtualizado.tarefasMensal2 == 1) {
+            usuarioAtualizado.tarefasMensal2 = 0;
+          } else {
+            usuarioAtualizado.tarefasMensal2 = 1;
+          }
+          break;
         default:
           break;
       }
@@ -84,42 +84,42 @@ export default function Tarefa() {
       console.error('Erro:', erro.message);
     }
   };
-    return <>
-        <main className='containerTarefa'>
-            <section className='containerTarefasMensaisAll'>
-                <div className="containerTarefaMensais">
-                    <h2>Tarefa 1</h2>
-                    <div className='containerText'><p>teste tste teste testetetetetetetet{usuario.nome}</p></div>
+  return <>
+    <main className='containerTarefa'>
+      <section className='containerTarefasMensaisAll'>
+        <div className="containerTarefaMensais">
+          <h2>Tarefa 1</h2>
+          <div className='containerText'><p>teste tste teste testetetetetetetet{usuario.nome}</p></div>
 
-                    <button onClick={() => handleAtualizarTarefas(0)}>Terminei essa tarefa</button>
-                </div>
-                <div className="containerTarefaMensais">
-                    <h2>Tarefa 1</h2>
-                    <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
+          <button onClick={() => handleAtualizarTarefas(0)}>Terminei essa tarefa</button>
+        </div>
+        <div className="containerTarefaMensais">
+          <h2>Tarefa 1</h2>
+          <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
 
-                    <button onClick={() => handleAtualizarTarefas(1)}>Terminei essa tarefa</button>
-                </div>
-            </section>
-            <section className='containerTarefasDiariasAll'>
-                <div className="containerTarefaDiarias">
-                    <h2>Tarefa 1</h2>
-                    <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
+          <button onClick={() => handleAtualizarTarefas(1)}>Terminei essa tarefa</button>
+        </div>
+      </section>
+      <section className='containerTarefasDiariasAll'>
+        <div className="containerTarefaDiarias">
+          <h2>Tarefa 1</h2>
+          <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
 
-                    <button onClick={() => handleAtualizarTarefas(2)}>Terminei essa tarefa</button>
-                </div>
-                <div className="containerTarefaDiarias">
-                    <h2>Tarefa 2</h2>
-                    <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
+          <button onClick={() => handleAtualizarTarefas(2)}>Terminei essa tarefa</button>
+        </div>
+        <div className="containerTarefaDiarias">
+          <h2>Tarefa 2</h2>
+          <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
 
-                    <button onClick={() => handleAtualizarTarefas(3)}>Terminei essa tarefa</button>
-                </div>
-                <div className="containerTarefaDiarias">
-                    <h2>Tarefa 3</h2>
-                    <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
+          <button onClick={() => handleAtualizarTarefas(3)}>Terminei essa tarefa</button>
+        </div>
+        <div className="containerTarefaDiarias">
+          <h2>Tarefa 3</h2>
+          <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
 
-                    <button onClick={() => handleAtualizarTarefas(4)}>Terminei essa tarefa</button>
-                </div>
-            </section>
-        </main >
-    </>
+          <button onClick={() => handleAtualizarTarefas(4)}>Terminei essa tarefa</button>
+        </div>
+      </section>
+    </main >
+  </>
 }

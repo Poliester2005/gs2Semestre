@@ -42,9 +42,10 @@ $branco: #fff;
                 border-radius: 5px;
                 border-bottom: none;
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
                 background-color: $azul;
                 color: $branco;
+                text-align: center;
             }
             .primeiro {
                 margin-top: 0;

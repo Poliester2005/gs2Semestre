@@ -2,11 +2,30 @@ import { useState, useEffect } from "react";
 import './style/perfil.scss'
 
 export default function Perfil() {
-    const idUsuario = 1;
-    const [usuario, setUsuario] = useState({ tarefasDiaria1: 1 });
+    const [usuario, setUsuario] = useState([]);
+    const [tarefas, setTarefas] = useState([]);
+
+    const idUsuario = (props) => {
+        const { idUsuario } = props;
+        return {idUsuario}
+    };
+
+    const getTarefas = () => {
+        var variaveisAPI = {
+            method: "GET",
+        };
+
+        fetch(`http://localhost:3000/tarefas`, variaveisAPI)
+            .then((response) => response.json())
+            .then((resultado) => setTarefas(resultado))
+            .catch((error) => console.log("error", error));
+    }
 
 
-    const getData = () => {
+
+    console.log(tarefas)
+
+    const getUsuario = () => {
         var variaveisAPI = {
             method: "GET",
         };
@@ -18,7 +37,9 @@ export default function Perfil() {
     };
 
     useEffect(() => {
-        getData();
+        getUsuario();
+        getTarefas();
+        idUsuario();
     }, [idUsuario]);
 
 
@@ -26,31 +47,56 @@ export default function Perfil() {
         switch (index) {
             case 1:
                 if (usuario.tarefasDiaria1 == 1) {
-                    return <div className="cardTarefa">Tarefa 1</div>;
+                    return <>
+                        <div className="cardTarefa">
+                            <h1>{tarefas[0]?.titulo}</h1>
+                            <p>{tarefas[0]?.descricao}</p>
+                        </div>
+                    </>
                 } else {
                     return false;
                 }
             case 2:
                 if (usuario.tarefasDiaria2 == 1) {
-                    return <div className="cardTarefa">Tarefa 2</div>;
+                    return <>
+                        <div className="cardTarefa">
+                            <h1>{tarefas[1]?.titulo}</h1>
+                            <p>{tarefas[1]?.descricao}</p>
+                        </div>
+                    </>
                 } else {
                     return false;
                 }
             case 3:
                 if (usuario.tarefasDiaria3 == 1) {
-                    return <div className="cardTarefa">Tarefa 3</div>;
+                    return <>
+                        <div className="cardTarefa">
+                            <h1>{tarefas[2]?.titulo}</h1>
+                            <p>{tarefas[2]?.descricao}</p>
+                        </div>
+                    </>
                 } else {
                     return false;
                 }
             case 4:
                 if (usuario.tarefasMensal1 == 1) {
-                    return <div className="cardTarefa">Tarefa 4</div>;
+                    return <>
+                        <div className="cardTarefa">
+                            <h1>{tarefas[3]?.titulo}</h1>
+                            <p>{tarefas[3]?.descricao}</p>
+                        </div>
+                    </>
                 } else {
                     return false;
                 }
             case 5:
                 if (usuario.tarefasMensal2 == 1) {
-                    return <div className="cardTarefa">Tarefa 5</div>;
+                    return <>
+                        <div className="cardTarefa">
+                            <h1>{tarefas[4]?.titulo}</h1>
+                            <p>{tarefas[4]?.descricao}</p>
+                        </div>
+                    </>
                 } else {
                     return false;
                 }

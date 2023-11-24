@@ -20,7 +20,7 @@ export default function Nav() {
             <div className='containerLink'>
                 <div className='home'>
                     <img src={home} alt="" />
-                    <NavLink exact activeClassName="active" className="NavLink" to="/">
+                    <NavLink exact activeClassName="active" className="NavLink" to="/home">
                         Home
                     </NavLink>
                 </div>

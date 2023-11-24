@@ -59,27 +59,31 @@ $branco: #fff;
 			}
 		}
 	}
-    .Linha{
-        margin: 5px;
-        width: 90%;
-        height: 1%;
-        border-radius: 5px;
-        background: #000;
-    }
-    .containerAtividades{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 80%;
-        .cardTarefa{
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            width: 30%;
-            height: 30%;
-            background-color: white;
-        }
-    }
+	.Linha {
+		margin: 5px;
+		width: 90%;
+		height: 1%;
+		border-radius: 5px;
+		background: grey;
+	}
+	.containerAtividades {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 80%;
+		.cardTarefa {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			flex-direction: column;
+			width: 30%;
+			height: 30%;
+			background-color: white;
+			overflow-wrap: break-word;
+			border-radius: 10px;
+			margin: 5px;
+		}
+	}
 }
