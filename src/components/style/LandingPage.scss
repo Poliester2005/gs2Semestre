@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Inter);
+
+$azul: #2384c8;
+$azul2: #5be0e6;
+$gradiente: linear-gradient(90deg, $azul, $azul2);
+$branco: #fff;
+
+* {
+    font-family: "Inter";
+}
+
+header {
+    color: $branco;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $gradiente;
+    width: 100%;
+    height: 8vh;
+
+    .NavLink {
+        text-decoration: none;
+        color: inherit;
+        height: 5vh;
+        width: 20%;
+        text-align: center;
+        color: black;
+        background: $branco;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+}
+
+main {
+    display: flex;
+
+    .containerEsquerda {
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 55%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+
+        figure {
+            border: solid #2384c8;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .artigo {
+            width: 100%;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                margin: 25px;
+                width: 60%;
+                border: solid #2384c8;
+                p{
+                    text-align: center;
+                    margin: 25px;
+                }
+            }
+        }
+    }
+
+    .containerDireita {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+
+        .itensDireita {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: justify;
+            border: 1px solid gray;
+            margin-top: 50px;
+
+            p {
+                margin: 25px;
+            }
+        }
+    }
+}

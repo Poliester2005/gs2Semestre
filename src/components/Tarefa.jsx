@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import './style/tarefa.scss';
+import { useState, useEffect } from "react";
+import "./style/tarefa.scss";
+import Nav from "./Nav";
 
 export default function Tarefa() {
   const idUsuario = 1;
@@ -7,13 +8,13 @@ export default function Tarefa() {
 
   const getData = () => {
     var variaveisAPI = {
-      method: 'GET',
+      method: "GET",
     };
 
     fetch(`http://localhost:3000/usuarios/${idUsuario}`, variaveisAPI)
       .then((response) => response.json())
       .then((result) => setUsuario(result))
-      .catch((error) => console.log('error', error));
+      .catch((error) => console.log("error", error));
   };
 
   useEffect(() => {
@@ -66,60 +67,86 @@ export default function Tarefa() {
           break;
       }
 
-      const resposta = await fetch(`http://localhost:3000/usuarios/${idUsuario}`, {
-        method: 'PUT',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify(usuarioAtualizado),
-      });
+      const resposta = await fetch(
+        `http://localhost:3000/usuarios/${idUsuario}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(usuarioAtualizado),
+        }
+      );
 
       if (!resposta.ok) {
-        throw new Error('Erro ao atualizar dados');
+        throw new Error("Erro ao atualizar dados");
       }
 
       // Atualiza o estado local após a atualização bem-sucedida
       setUsuario(usuarioAtualizado);
     } catch (erro) {
-      console.error('Erro:', erro.message);
+      console.error("Erro:", erro.message);
     }
   };
-  return <>
-    <main className='containerTarefa'>
-      <section className='containerTarefasMensaisAll'>
-        <div className="containerTarefaMensais">
-          <h2>Tarefa 1</h2>
-          <div className='containerText'><p>teste tste teste testetetetetetetet{usuario.nome}</p></div>
+  return (
+    <>
+      <Nav />
+      <main className="containerTarefa">
+        <section className="containerTarefasMensaisAll">
+          <div className="containerTarefaMensais">
+            <h2>Tarefa 1</h2>
+            <div className="containerText">
+              <p>teste tste teste testetetetetetetet{usuario.nome}</p>
+            </div>
 
-          <button onClick={() => handleAtualizarTarefas(0)}>Terminei essa tarefa</button>
-        </div>
-        <div className="containerTarefaMensais">
-          <h2>Tarefa 1</h2>
-          <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
+            <button onClick={() => handleAtualizarTarefas(0)}>
+              Terminei essa tarefa
+            </button>
+          </div>
+          <div className="containerTarefaMensais">
+            <h2>Tarefa 1</h2>
+            <div className="containerText">
+              <p>teste tste teste testetetetetetetet</p>
+            </div>
 
-          <button onClick={() => handleAtualizarTarefas(1)}>Terminei essa tarefa</button>
-        </div>
-      </section>
-      <section className='containerTarefasDiariasAll'>
-        <div className="containerTarefaDiarias">
-          <h2>Tarefa 1</h2>
-          <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
+            <button onClick={() => handleAtualizarTarefas(1)}>
+              Terminei essa tarefa
+            </button>
+          </div>
+        </section>
+        <section className="containerTarefasDiariasAll">
+          <div className="containerTarefaDiarias">
+            <h2>Tarefa 1</h2>
+            <div className="containerText">
+              <p>teste tste teste testetetetetetetet</p>
+            </div>
 
-          <button onClick={() => handleAtualizarTarefas(2)}>Terminei essa tarefa</button>
-        </div>
-        <div className="containerTarefaDiarias">
-          <h2>Tarefa 2</h2>
-          <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
+            <button onClick={() => handleAtualizarTarefas(2)}>
+              Terminei essa tarefa
+            </button>
+          </div>
+          <div className="containerTarefaDiarias">
+            <h2>Tarefa 2</h2>
+            <div className="containerText">
+              <p>teste tste teste testetetetetetetet</p>
+            </div>
 
-          <button onClick={() => handleAtualizarTarefas(3)}>Terminei essa tarefa</button>
-        </div>
-        <div className="containerTarefaDiarias">
-          <h2>Tarefa 3</h2>
-          <div className='containerText'><p>teste tste teste testetetetetetetet</p></div>
+            <button onClick={() => handleAtualizarTarefas(3)}>
+              Terminei essa tarefa
+            </button>
+          </div>
+          <div className="containerTarefaDiarias">
+            <h2>Tarefa 3</h2>
+            <div className="containerText">
+              <p>teste tste teste testetetetetetetet</p>
+            </div>
 
-          <button onClick={() => handleAtualizarTarefas(4)}>Terminei essa tarefa</button>
-        </div>
-      </section>
-    </main >
-  </>
+            <button onClick={() => handleAtualizarTarefas(4)}>
+              Terminei essa tarefa
+            </button>
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }
